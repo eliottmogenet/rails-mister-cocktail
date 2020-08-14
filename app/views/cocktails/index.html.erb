@@ -1,24 +1,33 @@
 
 
+<div class="container">
+  <div class="card-cocktail">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <img class="" src="../images/cocktail_photo.jpg" alt="first_cocktal">
+            <div class="description">
+            <h5><%= @cocktails.first.name %></h5>
+            </div>
+          </div>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-
-    <div class="carousel-item active" >
-      <img class="d-block w-100" src="..." alt="first_cocktal">
-      <h5><%= @cocktails.first.name %></h5>
-      <p>first slide </p>
-    </div>
-
-      <% @cocktails.drop(1).each do |cocktail| %>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="cocktail_photo">
-          <h5><%= cocktail.name %></h5>
-          <p>description</p>
-          <%= link_to "See recipe", cocktail_path(cocktail.id) %>
+          <% @cocktails.drop(1).each do |cocktail| %>
+            <div class="carousel-item">
+              <%= image_tag "cocktail-1.jpg", alt: "Cocktail", width: 350%>
+              <div class="description">
+              <h5><%= cocktail.name %></h5>
+              <%= link_to "See recipe", cocktail_path(cocktail.id), class: 'btn btn-primary' %>
+              </div>
+            </div>
+           <% end %>
         </div>
-       <% end %>
+    </div>
   </div>
 </div>
 
-</div>
+
+
+
+
+
+

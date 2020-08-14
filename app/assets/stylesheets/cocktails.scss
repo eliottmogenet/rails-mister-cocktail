@@ -1,3 +1,36 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.carousel-item {
+  padding-top: 90px;
+
+  &:btn {
+    color: #B0B8DA;
+  }
+
+  img {
+    border-radius: 5px;
+
+  &:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+  }
+}
+
+
+.description {
+  padding: 10px;
+  text-align: center;
+
+}
+
+
+
